@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Image Generator</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://cdn.rawgit.com/akfish/vibrant.js/v1.0.0/dist/Vibrant.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <h1>AI Image Generator</h1>
+    </div>
+  </header>
+
+  <main class="main-container">
+    <section class="hero-section" id="heroSection">
+      <div class="hero-content">
+        <h2>Unleash Your Imagination with AI-Generated Images</h2>
+        <p>Transform simple prompts into stunning visuals using cutting-edge AI technology.</p>
+        <button onclick="scrollToGenerator()">Generate Now</button>
+      </div>
+      <div class="hero-images" id="heroImages"></div>
+    </section>
+
+    <section class="how-to-use">
+      <h2>How to Use</h2>
+      <p>1. Enter tags or use the random tag generator.</p>
+      <p>2. Specify the number of images you want.</p>
+      <p>3. Choose a filter to enhance your images.</p>
+      <p>4. Click "Generate Image" to see the magic happen!</p>
+      <p>5. Download or share your favorite images.</p>
+    </section>
+
+    <section class="image-generator" id="imageGenerator">
+      <div class="user-prompt">
+        <input type="text" class="tags" id="tags" placeholder="Enter tags...">
+        <input type="number" class="image-count" id="imageCount" placeholder="Image Count" min="1" max="5" value="1">
+        <button onclick="getImgs()">Generate Image</button>
+        <button onclick="clearImages()">Clear Images</button>
+        <button onclick="getRandomTag()">Random Tag</button>
+      </div>
+      <div class="image-options">
+        <label for="filterSelect">Filter:</label>
+        <select id="filterSelect">
+          <option value="none">None</option>
+          <option value="grayscale">Grayscale</option>
+          <option value="sepia">Sepia</option>
+          <option value="blur">Blur</option>
+        </select>
+        <button onclick="applyFilter()">Apply Filter</button>
+      </div>
+      <div class="loading-spinner" id="loadingSpinner"></div>
+      <div class="images-container" id="imagesContainer"></div>
+      <div class="color-palette" id="colorPalette"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2023 Amr Mostafa Elgendy. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
