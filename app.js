@@ -1,4 +1,4 @@
-const apiKey = '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';
+const apiKey = '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';
 const unsplashAccessKey = 'X6JpeHGM08O2uH4d_58ea_M9jdQk5yFgqpFgC1KzpUU';
 
 const tagsInput = document.getElementById('tags');
